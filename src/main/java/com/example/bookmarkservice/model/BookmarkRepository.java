@@ -1,0 +1,11 @@
+package com.example.bookmarkservice.model;
+
+import java.util.Collection;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BookmarkRepository extends JpaRepository<Bookmark, Long> {
+
+	public Collection<Bookmark> findByAccountUsername(String username);
+	
+}
